@@ -13,7 +13,6 @@ class TestStudent < MiniTest::Test
   def test_get_cohort
     student = Student.new("Paul", 21)
     assert_equal(21, student.get_cohort())
-
   end
 
   def test_set_name
@@ -26,14 +25,11 @@ class TestStudent < MiniTest::Test
     student = Student.new("Paul", 21)
     student.set_cohort(25)
     assert_equal(25, student.get_cohort())
-
   end
 
   def test_talks
     student = Student.new("Paul", 21)
     assert_equal(String, student.talks())
-
   end
-
 
 end

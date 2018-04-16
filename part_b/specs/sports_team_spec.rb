@@ -19,4 +19,10 @@ class TestSportsTeam < MiniTest::Test
     assert_equal("Brendan Rodgers", sports_team.get_coach_name())
   end
 
+  def test_set_coach_name
+    sports_team = SportsTeam.new("Celtic", ["Jimmy Johnson", "Henrik Larsson", "Mousa Dembele"], "Brendan Rodgers")
+    sports_team.set_coach_name("Tommy Burns")
+    assert_equal("Tommy Burns", sports_team.get_coach_name())
+  end
+
 end

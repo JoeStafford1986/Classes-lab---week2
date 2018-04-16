@@ -25,4 +25,8 @@ class Student
     return "Hello".class
   end
 
+  def get_favourite_langauge(favourite_language)
+    return "I love #{favourite_language}"
+  end
+
 end

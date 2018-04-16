@@ -32,4 +32,10 @@ class TestStudent < MiniTest::Test
     assert_equal(String, student.talks())
   end
 
+  def test_get_favourite_language
+    student = Student.new("Paul", 21)
+
+    assert_equal("I love C++", student.get_favourite_langauge("C++"))
+  end
+
 end

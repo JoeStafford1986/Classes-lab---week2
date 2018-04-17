@@ -34,10 +34,16 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(["Jimmy Johnson", "Henrik Larsson", "Mousa Dembele", "Scott Brown"], sports_team.players())
   end
 
-  def test_find_player_by_name
+  def test_find_player_by_name__player_found
     sports_team = SportsTeam.new("Celtic", ["Jimmy Johnson", "Henrik Larsson", "Mousa Dembele"], "Brendan Rodgers")
 
     assert_equal(true, sports_team.find_player_by_name("Henrik Larsson"))
+  end
+
+  def test_find_player_by_name__player_not_found
+    sports_team = SportsTeam.new("Celtic", ["Jimmy Johnson", "Henrik Larsson", "Mousa Dembele"], "Brendan Rodgers")
+
+    assert_equal(false, sports_team.find_player_by_name("Larsson"))
   end
 
 end

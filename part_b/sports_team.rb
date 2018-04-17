@@ -17,6 +17,7 @@ class SportsTeam
     for player in @players
       return true if player == player_to_find
     end
+    return false
   end
-  
+
 end

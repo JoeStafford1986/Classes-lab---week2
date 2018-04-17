@@ -46,4 +46,10 @@ class TestSportsTeam < MiniTest::Test
     assert_equal(false, sports_team.find_player_by_name("Larsson"))
   end
 
+  def test_award_points_following_game__win
+    sports_team = SportsTeam.new("Celtic", ["Jimmy Johnson", "Henrik Larsson", "Mousa Dembele"], "Brendan Rodgers")
+    sports_team.award_points_following_game("win")
+    assert_equal(3, sports_team.points())
+  end
+
 end
